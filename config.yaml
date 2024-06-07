@@ -1,5 +1,5 @@
 SERVICE_NAME: "ERC 20 & 721 Tokens API"
-PORT: 3008
+PORT: 3000
 NETWORK: hardhat
 CONTRACTS:
   - name: AlastriaERC20
