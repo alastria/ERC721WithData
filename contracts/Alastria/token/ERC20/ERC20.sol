@@ -7,16 +7,23 @@ import {ERC20} from "../../../OpenZeppelin/token/ERC20/ERC20.sol";
 import {Ownable} from "../../../OpenZeppelin/access/Ownable.sol";
 
 contract AlastriaERC20 is ERC20, Ownable {
-
-    constructor(string memory name, string memory symbol, uint256 initialBalance) ERC20(name, symbol) Ownable(msg.sender) {
-        mint(msg.sender, initialBalance);
+    constructor(string memory name, string memory symbol, uint256 initialBalance) ERC20(name, symbol) Ownable(_msgSender()) {
+        mintTo(_msgSender(), initialBalance);
     }
 
-    function mint(address account, uint256 value) public onlyOwner {
+    function mint(uint256 value) public onlyOwner {
+        mintTo(_msgSender(), value);
+    }
+
+    function mintTo(address account, uint256 value) public onlyOwner {
         super._mint(account, value);
     }
 
-    function burn(address account, uint256 value) public onlyOwner {
+    function burn(uint256 value) public onlyOwner {
+        burnFrom(_msgSender(), value);
+    }
+
+    function burnFrom(address account, uint256 value) public onlyOwner {
         super._burn(account, value);
     }
 }
