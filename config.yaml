@@ -2,10 +2,10 @@ SERVICE_NAME: "ERC 20 & 721 Tokens API"
 PORT: 3008
 NETWORK: hardhat
 CONTRACTS:
-  - name: AlastriaERC20Token
+  - name: AlastriaERC20
     address:
     autoDeploy: false
-  - name: AlastriaERC721Token
+  - name: AlastriaERC721
     address:
     autoDeploy: false
 LOG_LEVELS:
