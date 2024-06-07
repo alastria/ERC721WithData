@@ -14,11 +14,15 @@ contract AlastriaERC721 is ERC721, Ownable {
         mintTo(_msgSender(), tokenId);
     }
 
-    function mintTo(address account, uint256 tokenId) public onlyOwner {
-        super._safeMint(account, tokenId);
+    function mintTo(address to, uint256 tokenId) public onlyOwner {
+        super._safeMint(to, tokenId);
     }
 
     function burn(uint256 tokenId) public onlyOwner {
         super._burn(tokenId);
+    }
+
+    function transfer(address to, uint256 tokenId) public {
+        super.safeTransferFrom(_msgSender(), to, tokenId);
     }
 }

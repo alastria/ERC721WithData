@@ -15,15 +15,15 @@ contract AlastriaERC20 is ERC20, Ownable {
         mintTo(_msgSender(), value);
     }
 
-    function mintTo(address account, uint256 value) public onlyOwner {
-        super._mint(account, value);
+    function mintTo(address to, uint256 value) public onlyOwner {
+        super._mint(to, value);
     }
 
     function burn(uint256 value) public onlyOwner {
         burnFrom(_msgSender(), value);
     }
 
-    function burnFrom(address account, uint256 value) public onlyOwner {
-        super._burn(account, value);
+    function burnFrom(address from, uint256 value) public onlyOwner {
+        super._burn(from, value);
     }
 }
