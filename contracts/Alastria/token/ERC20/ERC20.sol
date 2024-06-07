@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Alastria Contracts (last updated v0.0.1) (token/ERC20/ERC20.sol)
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.24;
 
 import {ERC20} from "../../../OpenZeppelin/token/ERC20/ERC20.sol";
 import {Ownable} from "../../../OpenZeppelin/access/Ownable.sol";
