@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "235be05c-1bf4-4fa9-81b8-ea73d1ddb148",
+		"name": "Alastria ERC721 with struct data Contract API Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33270317"
+	},
+	"item": [
+		{
+			"name": "Deploy Contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"args\": [\n        \"Test\",\n        \"TST\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/AlastriaERC721StructData/deploy",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"AlastriaERC721StructData",
+						"deploy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mint token with ID 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"args\": [\n        0,\n        {\n            \"storedHash\": \"0x000000000000000000000000000000000000\",\n            \"number\": \"0987654321\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/AlastriaERC721StructData/{{erc721structDataAddress}}/mint",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"AlastriaERC721StructData",
+						"{{erc721structDataAddress}}",
+						"mint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data for token with ID 0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"args\": [\n        0\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/AlastriaERC721StructData/{{erc721structDataAddress}}/getData",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"AlastriaERC721StructData",
+						"{{erc721structDataAddress}}",
+						"getData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data for token with ID 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"args\": [\n        0,\n        {\n            \"storedHash\": \"0x653ee3b1bd2cfa795c248d1eaaddc64f1d52b54d9961a67eb2796ac53041b229\",\n            \"number\": \"1234567890\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/AlastriaERC721StructData/{{erc721structDataAddress}}/updateData",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"AlastriaERC721StructData",
+						"{{erc721structDataAddress}}",
+						"updateData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Burn token with ID 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"args\": [\n        0\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/AlastriaERC721StructData/{{erc721structDataAddress}}/burn",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"AlastriaERC721StructData",
+						"{{erc721structDataAddress}}",
+						"burn"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{api-key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://4wxrg2hmyf.eu-west-1.awsapprunner.com",
+			"type": "string"
+		},
+		{
+			"key": "erc721structDataAddress",
+			"value": "0x95C41E67ca59Abfc34582bf00825C3082b15ba31",
+			"type": "string"
+		},
+		{
+			"key": "api-key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
