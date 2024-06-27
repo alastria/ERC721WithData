@@ -13,12 +13,12 @@ import handleControllerCall from "../controllers";
 
 import Logger from "../../helpers/logger.helper";
 import Config from "../../types/Config.type";
-// import { apiKeyMiddleware } from "../middleware/apiKey.middleware";
+import { apiKeyMiddleware } from "../middleware/apiKey.middleware";
 
 const app: Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(apiKeyMiddleware);
+app.use(apiKeyMiddleware);
 
 let logger: Logger;
 let config: Config;

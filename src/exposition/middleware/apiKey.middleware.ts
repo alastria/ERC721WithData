@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 
 // Format is 'key': enabled
 const apiKeys: { [key: string]: boolean } = {
-  "4c6f127a-df95-472e-ba18-05a22d7ff405": true,
+  "574c8880-3456-11ef-9a9c-0800200c9a66": true,
 };
 
 // Super basic API Key authentication middleware.

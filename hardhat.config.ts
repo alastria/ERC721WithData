@@ -50,7 +50,7 @@ module.exports = {
       url: "http://63.33.55.29",
       accounts: [ethers.Wallet.createRandom().privateKey],
       httpHeaders: {
-        "X-APIkey": '018fb8ff-36a1-74ea-9620-3b130fd23d67'
+        "X-APIkey": ''
       }
     },
   },

@@ -1,11 +1,8 @@
 SERVICE_NAME: "ERC 20 & 721 Tokens API"
 PORT: 3000
-NETWORK: hardhat
+NETWORK: redB
 CONTRACTS:
-  - name: AlastriaERC20
-    address:
-    autoDeploy: false
-  - name: AlastriaERC721
+  - name: AlastriaERC721StructData
     address:
     autoDeploy: false
 LOG_LEVELS:
